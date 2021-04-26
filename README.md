@@ -40,6 +40,7 @@ This method simply calculates the average values of three channels in style imag
 <p align="center">
   <img src="./pictures/problem3_1.png" height="100"/>
 </p>
+
 #### Solution2: Improved average RGB method
 This method makes small modification at Average RGB method. Instead of calculating the average of the whole image, it separates the image into 9 parts like a board of Tic Tac Toe and calculates the average values of three channels in 9 parts.
 Therefore, for a style image, we get 9 average values of 3 channels, that is 27 average values in all. Then similar to Average RGB method, we evaluate the performance of the style-transfer model by the difference of average differences of the three channels.
