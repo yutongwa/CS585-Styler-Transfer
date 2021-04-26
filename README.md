@@ -11,5 +11,5 @@ This session is about the problems we find during experiment.
 ### 1. falsely learn the color distribution of style images
 When there is an obvious boundary between the upper and lower colors in the style image, the original image will retain such features after conversion, even if there is no obvious boundary between the upper and lower colors in the original image.
 <p align="center">
-  <img src="./pictures/problem1_1.png" align="right" alt="" width="300"/>
+  <img src="./pictures/problem1_1.png" height="300"/>
 </p>
