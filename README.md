@@ -30,5 +30,33 @@ And the table below shows the computed sum of horizontal and vertical edges. And
   <img src="./pictures/problem2_2.png" height="100"/>
 </p>
 
+### 3. How to evaluate style loss
+For different styles, it is reasonable to try different quantitative metrics to evaluate them. In most cases, we can judge whether the style-transferred face images are good or not by eyes directly, which we often do intuitively in daily life. However, we still need to do quantitative evaluation that helps us to prove our intuitive judgement.
+Take style loss for example, we compare the style images and style-transferred face images, and define some methods to measure the loss of style in transferred images. 
+#### Solution1: Average RGB method
+This method simply calculates the average values of three channels in style image and transferred image. And evaluate the performance of the style-transfer model by the difference of average differences of the three channels.
+
+ 
+<p align="center">
+  <img src="./pictures/problem3_1.png" height="100"/>
+</p>
+#### Solution2: Improved average RGB method
+This method makes small modification at Average RGB method. Instead of calculating the average of the whole image, it separates the image into 9 parts like a board of Tic Tac Toe and calculates the average values of three channels in 9 parts.
+Therefore, for a style image, we get 9 average values of 3 channels, that is 27 average values in all. Then similar to Average RGB method, we evaluate the performance of the style-transfer model by the difference of average differences of the three channels.
+<p align="center">
+  <img src="./pictures/problem3_2.png" height="100"/>
+</p>
+
+#### Solution3: RGB Range method
+This method makes use of the ranges of RGB channels to evaluate the style loss of generated face images. The basic idea is to calculate the upper bounds and lower bounds of three channels. Then by comparing the difference of ranges and bounds in each channel, we obtain three measurements to evaluate the transferred results. However, the key point is that we should not simply apply the minimum and maximum of the channel as the lower bound and upper bound, since in most cases, the minimum is always 0 and maximum is always 255. Here we set a threshold 20%, which means if given a lower bound value L and only 20% of the pixels less than L, then we assume L is the lower bound. And we calculate the upper bounds in the same way. Based on this, we can evaluate the performance like:
+
+<p align="center">
+  <img src="./pictures/problem3_3.png" height="300"/>
+</p>
+
+
+
+
+
 
 
