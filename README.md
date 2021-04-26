@@ -13,3 +13,5 @@ When there is an obvious boundary between the upper and lower colors in the styl
 <p align="center">
   <img src="./pictures/problem1_1.png" height="300"/>
 </p>
+We use the sum of all the pixels on the Y-axis of the stylized image to measure this problem. The following table shows the stylized image curves for normal style images (output stylized images are reasonably well) and special cases (the styles we mentioned above) on 150 different celebrities’ faces. A stylized image with distinct boundaries will result in a stylized image with very clear steps in the curve shown below. This may be because style transfer not only learns the style of style image, but also leaves the color distribution to the stylized image.
+
