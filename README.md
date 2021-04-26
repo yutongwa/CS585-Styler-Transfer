@@ -14,9 +14,11 @@ When there is an obvious boundary between the upper and lower colors in the styl
   <img src="./pictures/problem1_1.png" height="300"/>
 </p>
 We use the sum of all the pixels on the Y-axis of the stylized image to measure this problem. The following table shows the stylized image curves for normal style images (output stylized images are reasonably well) and special cases (the styles we mentioned above) on 150 different celebrities’ faces. A stylized image with distinct boundaries will result in a stylized image with very clear steps in the curve shown below. This may be because style transfer not only learns the style of style image, but also leaves the color distribution to the stylized image.
+
 <p align="center">
   <img src="./pictures/problem1_2.png" height="300"/>
 </p>
+
 ### 2. Falsely learn the edge distribution of style images
 Human face is like a circle, which means that the vertical edges is roughly equal to the horizontal edges. At the mean time, we notice that if a style image contain more horizontal edges than vertical edges. The stylized image using this style will also show the same feature and vise versa. Here we show two style image the first style image contain more horizontal edges than vertical edges, while the second one is like human faces who have almost equal horizontal and vertical edges. 
 
