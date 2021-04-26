@@ -8,5 +8,5 @@ For this project, we mainly use TensorFlow_hub to realize style transfer. And ou
 
 ## Problems in Style Transfer
 This session is about the problems we find during experiment.
-###1. falsely learn the color distribution of style images
+### 1. falsely learn the color distribution of style images
 
