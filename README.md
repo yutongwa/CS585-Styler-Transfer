@@ -7,15 +7,18 @@ Neural style transfer is a optimization technique used to take two images, one i
 For this project, we mainly use TensorFlow_hub to realize style transfer. And our key points are not about to train an style transfer model. What we mind is what kind of styles are hard to learn or what kind of content pictures(especially face images) will fail to transfer. We try many groups of content images and style images to find problems in style transfer .
 
 ## Project Procedure
-1. Collect celebrity face images and style images
+1. Collect celebrity face images and style images.
 2. Do style transfer by TensorFlow_hub, and compare the stylied images with content images and style images. Then we filter out some bad cases to do simulation. 
-3. For quantitative metric, We think about content loss and style loss to evaluate the stylized image
+3. For quantitative metric, We think about content loss and style loss to evaluate the stylized image.
+4. For qualitative metric, it's mainly based on whether the stylied images keep the outline of the faces or whether the hue of sytle images match the hue of stylized images.
+5. 
 
-## Problems in Style Transfer
-
+## Content Loss and Style Loss Methods
 ### Content Loss
-This session is about the problems we find during experiment.
-#### 1. Falsely learn the color distribution of style images
+We mainly sperate horizontal and vertical sum of edges using edge detection. and compare it between style images and content images.
+The reason why we think about this method is we find when there is an obvious boundary between the upper and lower colors in the style image,the original image will retain such features after conversion, even if there is no obvious boundary between the upper and lower colors in the original image.
+#### Related Problem
+##### 1. Falsely learn the color distribution of style images
 When there is an obvious boundary between the upper and lower colors in the style image, the original image will retain such features after conversion, even if there is no obvious boundary between the upper and lower colors in the original image.
 <p align="center">
   <img src="./pictures/problem1_1.png" height="300"/>
@@ -26,7 +29,7 @@ We use the sum of all the pixels on the Y-axis of the stylized image to measure 
   <img src="./pictures/problem1_2.png" height="300"/>
 </p>
 
-#### 2. Falsely learn the edge distribution of style images
+##### 2. Falsely learn the edge distribution of style images
 Human face is like a circle, which means that the vertical edges is roughly equal to the horizontal edges. At the mean time, we notice that if a style image contain more horizontal edges than vertical edges. The stylized image using this style will also show the same feature and vise versa. Here we show three style images the first style image contain more horizontal edges than vertical edges, while the last one is like human faces who have almost equal horizontal and vertical edges.
 Here are examples:
 <p align="center">
