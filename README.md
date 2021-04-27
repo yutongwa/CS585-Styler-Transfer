@@ -11,7 +11,6 @@ For this project, we mainly use TensorFlow_hub to realize style transfer. And ou
 2. Do style transfer by TensorFlow_hub, and compare the stylied images with content images and style images. Then we filter out some bad cases to do simulation. 
 3. For quantitative metric, We think about content loss and style loss to evaluate the stylized image.
 4. For qualitative metric, it's mainly based on whether the stylied images keep the outline of the faces or whether the hue of sytle images match the hue of stylized images.
-5. 
 
 ## Content Loss and Style Loss Methods
 ### Content Loss
@@ -44,7 +43,7 @@ And the table below shows the computed sum of horizontal and vertical edges. And
 </p>
 
 ### Style Loss
-#### 3. How to evaluate style loss
+#### How to evaluate style loss
 For different styles, it is reasonable to try different quantitative metrics to evaluate them. In most cases, we can judge whether the style-transferred face images are good or not by eyes directly, which we often do intuitively in daily life. However, we still need to do quantitative evaluation that helps us to prove our intuitive judgement.
 Take style loss for example, we compare the style images and style-transferred face images, and define some methods to measure the loss of style in transferred images. 
 ##### Solution1: Average RGB method
