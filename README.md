@@ -20,15 +20,19 @@ We use the sum of all the pixels on the Y-axis of the stylized image to measure 
 </p>
 
 ### 2. Falsely learn the edge distribution of style images
-Human face is like a circle, which means that the vertical edges is roughly equal to the horizontal edges. At the mean time, we notice that if a style image contain more horizontal edges than vertical edges. The stylized image using this style will also show the same feature and vise versa. Here we show two style image the first style image contain more horizontal edges than vertical edges, while the second one is like human faces who have almost equal horizontal and vertical edges. 
+Human face is like a circle, which means that the vertical edges is roughly equal to the horizontal edges. At the mean time, we notice that if a style image contain more horizontal edges than vertical edges. The stylized image using this style will also show the same feature and vise versa. Here we show three style images the first style image contain more horizontal edges than vertical edges, while the last one is like human faces who have almost equal horizontal and vertical edges.
+Here are examples:
 <p align="center">
-  <img src="./pictures/problem2_1png.png" height="300"/>
+  <img src="./pictures/problem2_5.png" height="300"/>
 </p>
-
 And the table below shows the computed sum of horizontal and vertical edges. And the result is same with the conclusion we draw above.
 <p align="center">
-  <img src="./pictures/problem2_2.png" height="100"/>
+  <img src="./pictures/problem2_3.png" height="300"/>
 </p>
+<p align="center">
+  <img src="./pictures/problem2_4.png" height="300"/>
+</p>
+
 
 ### 3. How to evaluate style loss
 For different styles, it is reasonable to try different quantitative metrics to evaluate them. In most cases, we can judge whether the style-transferred face images are good or not by eyes directly, which we often do intuitively in daily life. However, we still need to do quantitative evaluation that helps us to prove our intuitive judgement.
